@@ -20,7 +20,7 @@ def generate_stateful_architecture_diagram():
     
     # Render and save the diagram
     diagram = Diagram("Stateful Architecture", filename="Stateful_Architecture", show=False)
-    diagram.render()
+    diagram.render(./DAAC/Stateful_Arcitecture)
 
 if __name__ == "__main__":
     generate_stateful_architecture_diagram()
