@@ -3,8 +3,8 @@ from diagrams.k8s.compute import Pod, StatefulSet
 from diagrams.k8s.network import Service
 from diagrams.k8s.storage import PV, PVC, StorageClass
 
-def generate_stateful_architecture_diagram():
-    with Diagram("Stateful Architecture", filename="https://github.com/Rifat-Shaikh123/DAAC/Stateful_Architecture.png", show=False):
+# def generate_stateful_architecture_diagram():
+    with Diagram("Stateful Architecture", show=False): #filename="https://github.com/Rifat-Shaikh123/DAAC/Stateful_Architecture.png"
         with Cluster("Apps"):
             svc = Service("svc")
             sts = StatefulSet("sts")
@@ -18,5 +18,5 @@ def generate_stateful_architecture_diagram():
 
         apps << PV("pv") << StorageClass("sc")
 
-if __name__ == "__main__":
-    generate_stateful_architecture_diagram()
+# if __name__ == "__main__":
+    # generate_stateful_architecture_diagram()
