@@ -1,0 +1,20 @@
+name: Generate Diagram
+
+on:
+  push:
+    branches:
+      - main  # Replace with your target branch
+
+jobs:
+  generate-diagram:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Install dependencies
+        run: pip install diagrams
+
+      - name: Generate diagram
+        run: python generate_diagram.py
