@@ -17,6 +17,10 @@ def generate_stateful_architecture_diagram():
                 apps.append(svc >> pod >> pvc)
 
         apps << PV("pv") << StorageClass("sc")
+    
+    # Specify the output filename and directory
+    filename = "Stateful_Architecture.png"
+    diagram.render(filename=filename)
 
 if __name__ == "__main__":
     generate_stateful_architecture_diagram()
