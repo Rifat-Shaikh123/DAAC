@@ -18,9 +18,9 @@ def generate_stateful_architecture_diagram():
 
         apps << PV("pv") << StorageClass("sc")
     
-    # Specify the output filename and directory
+    # Render and save the diagram with the specified filename
     filename = "Stateful_Architecture.png"
-    diagram.render(filename=filename)
+    Diagram.save(filename)
 
 if __name__ == "__main__":
     generate_stateful_architecture_diagram()
