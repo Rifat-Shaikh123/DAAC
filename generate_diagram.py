@@ -35,8 +35,7 @@ with Diagram("Managed Cloud Services", direction="LR"):
             Subscriptions1=Subscriptions("TSI Operations Subscription",height="0.5", width="0.5",fontsize="7")
             Custom1=Custom(" ", "./Screenshot 2024-02-09 132946.png", height="1.5", width="1.5")
             Pim1 = ADPrivilegedIdentityManagement("PIM", height="0.5", width="0.5",fontsize="7")
-            Cluster1 = [Subscriptions1 - Edge(style='invis') - [Repos("Repos", height="0.5", width="0.5",fontsize="7"),Pipelines("Pipelines", height="0.5", width="0.5",fontsize="7"),Devops("Azure DevOps", height="0.5", width="0.5",fontsize="7"),Custom("TCI Framework", "./AzureAutomation.png",height="0.5", width="0.5",fontsize="7"),Pim1,Usericon("\nAAD IAM",height="0.5", width="0.5",fontsize="7")]- Edge(style='invis') - Custom1,
-                    AccessReview("", height="0.25", width="0.25", pos='0,0')]
+            Cluster1 = [Subscriptions1 - Edge(style='invis') - [Repos("Repos", height="0.5", width="0.5",fontsize="7"),Pipelines("Pipelines", height="0.5", width="0.5",fontsize="7"),Devops("Azure DevOps", height="0.5", width="0.5",fontsize="7"),Custom("TCI Framework", "./AzureAutomation.png",height="0.5", width="0.5",fontsize="7"),Pim1,Usericon("\nAAD IAM",height="0.5", width="0.5",fontsize="7")]- Edge(style='invis') - Custom1, AccessReview("", height="0.25", width="0.25", pos='0,0')]
 
     
     with Cluster(" "):
