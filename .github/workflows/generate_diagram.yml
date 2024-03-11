@@ -21,3 +21,9 @@ jobs:
 
       - name: Generate diagram
         run: python generate_diagram.py
+        
+      - name: Upload diagram artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: stateful_architecture_diagram
+          path: ./Stateful_Architecture.png
