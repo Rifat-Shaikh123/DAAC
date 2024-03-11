@@ -4,7 +4,7 @@ from diagrams.k8s.network import Service
 from diagrams.k8s.storage import PV, PVC, StorageClass
 
 def generate_stateful_architecture_diagram():
-    with Diagram("Stateful Architecture", filename="./Stateful_Architecture.png", viewer=False):
+    with Diagram("Stateful Architecture", filename="./Stateful_Architecture.png", show=False):
         with Cluster("Apps"):
             svc = Service("svc")
             sts = StatefulSet("sts")
