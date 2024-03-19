@@ -1,22 +1,20 @@
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
 from diagrams import Cluster, Diagram
 from diagrams.k8s.compute import Pod, StatefulSet
 from diagrams.k8s.network import Service
 from diagrams.k8s.storage import PV, PVC, StorageClass
 
-# def generate_stateful_architecture_diagram():
-    with Diagram("Stateful Architecture", show=False): 
-        with Cluster("Apps"):
-            svc = Service("svc")
-            sts = StatefulSet("sts")
+with Diagram('Stateful Architecture'):
+    with Cluster('Apps'):
+        svc = Service('svc')
+        sts = StatefulSet('sts')
 
-            apps = []
-            for _ in range(3):
-                pod = Pod("pod")
-                pvc = PVC("pvc")
-                pod - sts - pvc
-                apps.append(svc >> pod >> pvc)
+        apps = []
+        for _ in range(3):
+            pod = Pod('pod')
+            pvc = PVC('pvc')
+            pod - sts - pvc
+            apps.append(svc >> pod >> pvc)
 
-        apps << PV("pv") << StorageClass("sc")
-
-# if __name__ == "__main__":
-    # generate_stateful_architecture_diagram()
+    apps << PV('pv') << StorageClass('sc')
