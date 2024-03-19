@@ -5,7 +5,7 @@ from diagrams.k8s.compute import Pod, StatefulSet
 from diagrams.k8s.network import Service
 from diagrams.k8s.storage import PV, PVC, StorageClass
 
-with Diagram('Stateful Architecture'):
+with Diagram('Stateful Architecture', filename="Stateful_Architecture.png"):
     with Cluster('Apps'):
         svc = Service('svc')
         sts = StatefulSet('sts')
