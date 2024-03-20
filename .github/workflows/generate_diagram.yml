@@ -27,13 +27,4 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: stateful_architecture_diagram
-          path: |
-              ./rifat/stateful.png
-              
-      - name: Download articats
-        uses: actions/download-artifact@v2
-      - name: Place artifacts
-        shell: bash
-        run: |
-          rm -rf dist
-          mv artifact/* ./       
+          path: ${{github.workspace}}    
