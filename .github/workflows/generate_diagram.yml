@@ -18,6 +18,7 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y graphviz
           pip install diagrams
+          sudo apt-get install eog
 
       - name: Generate diagram
         run: python generate_diagram.py
